@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment & Salary | Home-Staff Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <header class="flex justify-between items-center p-4 bg-gray-800 text-white">
+    <div class="flex items-center">
+      <img src="logo.svg" alt="Logo" class="h-8 mr-4">
+      <button id="hamburger" class="text-white focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="flex items-center">
+      <button class="relative">
+        <i class="fas fa-bell"></i>
+        <span class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-1">3</span>
+      </button>
+    </div>
+  </header>
+  <div id="sidebar" class="fixed inset-y-0 left-0 bg-gray-700 text-white w-64 transform -translate-x-full transition-transform duration-300" aria-hidden="true">
+    <div class="p-4">
+      <h2 class="text-lg font-bold">Menu</h2>
+      <ul class="mt-4">
+        <li><a href="dashboard.html" class="block py-2 hover:bg-gray-600">Dashboard</a></li>
+        <li><a href="manage-workers.html" class="block py-2 hover:bg-gray-600">Manage Worker(s)</a></li>
+        <li><a href="payment-salary.html" class="block py-2 hover:bg-gray-600">Payment & Salary</a></li>
+        <li><a href="tasks-scheduling.html" class="block py-2 hover:bg-gray-600">Tasks & Scheduling</a></li>
+        <li><a href="legal-support.html" class="block py-2 hover:bg-gray-600">Legal & Support</a></li>
+        <li><a href="settings.html" class="block py-2 hover:bg-gray-600">Settings</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Payment & Salary Overview</h1>
+
+    <!-- Escrow Salary Overview -->
+    <div class="bg-white rounded-lg shadow-sm p-6 mb-6 border border-gray-100">
+      <h2 class="text-xl font-semibold mb-4">Escrow Salary Overview</h2>
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-medium">Total Escrow Amount:</span>
+        <span class="text-lg font-bold text-green-600">$1,200</span>
+      </div>
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Worker Name</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment Date</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deposit Status</th>
+            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
+            <td class="px-6 py-4 whitespace-nowrap">15/03/2023</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <button class="text-primary hover:text-blue-600">Release</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 whitespace-nowrap">Maria Smith</td>
+            <td class="px-6 py-4 whitespace-nowrap">22/05/2023</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Completed</span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <button class="text-gray-600 hover:text-gray-900">View</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
